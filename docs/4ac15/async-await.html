@@ -1,0 +1,693 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>async-await · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="axios-async-await.html" />
+    
+    
+    <link rel="prev" href="../3ac15/axios.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">개강 전</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    workspace settings
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">1강</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../jsx.html">
+            
+                <a href="../jsx.html">
+            
+                    
+                    JSX
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../props-state.html">
+            
+                <a href="../props-state.html">
+            
+                    
+                    Props, State
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../lifecyle-api.html">
+            
+                <a href="../lifecyle-api.html">
+            
+                    
+                    LifeCyle API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../javascript-array-methods.html">
+            
+                <a href="../javascript-array-methods.html">
+            
+                    
+                    Javascript Array Methods
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../wrap-ups.html">
+            
+                <a href="../wrap-ups.html">
+            
+                    
+                    Wrap-ups (1)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">2강</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../filter.html">
+            
+                <a href="../filter.html">
+            
+                    
+                    Wrap-ups (2)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../cef4-d3ec-b10c-d2b8-ad6c-c870-d654.html">
+            
+                <a href="../cef4-d3ec-b10c-d2b8-ad6c-c870-d654.html">
+            
+                    
+                    프로젝트 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../shouldcomponentupdate.html">
+            
+                <a href="../shouldcomponentupdate.html">
+            
+                    
+                    shouldComponentUpdate
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../c368-b4dc-d30c-d2f0-b77c-c774-be0c-b7ec-b9ac-c774-c6a9.html">
+            
+                <a href="../c368-b4dc-d30c-d2f0-b77c-c774-be0c-b7ec-b9ac-c774-c6a9.html">
+            
+                    
+                    써드파티 라이브러리 이용
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../ac1c-bc1c-b3c4-ad6c-c124-ce58.html">
+            
+                <a href="../ac1c-bc1c-b3c4-ad6c-c124-ce58.html">
+            
+                    
+                    개발도구 설치
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="../setstate.html">
+            
+                <a href="../setstate.html">
+            
+                    
+                    setState
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">3강</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../3ac15/immer.html">
+            
+                <a href="../3ac15/immer.html">
+            
+                    
+                    Immer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../3ac15/sass.html">
+            
+                <a href="../3ac15/sass.html">
+            
+                    
+                    sass (1)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../3ac15/sass-2.html">
+            
+                <a href="../3ac15/sass-2.html">
+            
+                    
+                    sass (2)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../3ac15/promise.html">
+            
+                <a href="../3ac15/promise.html">
+            
+                    
+                    promise
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../3ac15/axios.html">
+            
+                <a href="../3ac15/axios.html">
+            
+                    
+                    axios
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">4강</li>
+        
+        
+    
+        <li class="chapter active" data-level="5.1" data-path="async-await.html">
+            
+                <a href="async-await.html">
+            
+                    
+                    async-await
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="axios-async-await.html">
+            
+                <a href="axios-async-await.html">
+            
+                    
+                    프로젝트 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="react-router.html">
+            
+                <a href="react-router.html">
+            
+                    
+                    react router
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="redux.html">
+            
+                <a href="redux.html">
+            
+                    
+                    redux
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">5강</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../5ac15/redux-basics.html">
+            
+                <a href="../5ac15/redux-basics.html">
+            
+                    
+                    redux basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../5ac15/redux-basics2.html">
+            
+                <a href="../5ac15/redux-basics2.html">
+            
+                    
+                    redux basics(2)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../5ac15/redux-actions-bindactionscreators.html">
+            
+                <a href="../5ac15/redux-actions-bindactionscreators.html">
+            
+                    
+                    redux actions, bindActionsCreators
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../5ac15/redux-basics3.html">
+            
+                <a href="../5ac15/redux-basics3.html">
+            
+                    
+                    redux basics(3)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="../5ac15/d504-b85c-c81d-d2b8-2-router-refactoring.html">
+            
+                <a href="../5ac15/d504-b85c-c81d-d2b8-2-router-refactoring.html">
+            
+                    
+                    router refactoring
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >async-await</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&#xC9C0;&#xB09C;&#xC2DC;&#xAC04;&#xC5D0; &#xCF5C;&#xBC31;&#xD5EC;&#xC744; &#xD574;&#xACB0;&#xD558;&#xAE30;&#xC704;&#xD55C; &#xBC29;&#xBC95;&#xC73C;&#xB85C; promise&#xB97C; &#xBC30;&#xC6E0;&#xB294;&#xB370;&#xC694;,</p>
+<p>async-await&#xB97C; &#xC774;&#xC6A9;&#xD558;&#xBA74; &#xBCF4;&#xB2E4; &#xAC00;&#xB3C5;&#xC131;&#xC774; &#xB192;&#xC740; &#xCF54;&#xB4DC;&#xB97C; &#xC791;&#xC131;&#xD558;&#xC2E4; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>async-await&#xB294; promise&#xC640; &#xBCC4;&#xAC1C;&#xC758; &#xAC83;&#xC774; &#xC544;&#xB2C8;&#xB77C; promise&#xAE30;&#xBC18; &#xC704;&#xC5D0;&#xC11C; &#xC791;&#xB3D9;&#xD558;&#xB294; &#xAC83;&#xC774;&#xB77C;&#xACE0; &#xB9D0;&#xC500;&#xB4DC;&#xB838;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>async-await&#xB294; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC740; &#xD615;&#xC2DD;&#xC73C;&#xB85C; &#xC774;&#xB8E8;&#xC5B4;&#xC9D1;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">asyncFunc</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-keyword">await</span> &#xCCAB;&#xBC88;&#xC9F8; promise
+    <span class="hljs-keyword">await</span> &#xB450;&#xBC88;&#xC9F8; promise
+    <span class="hljs-keyword">await</span> &#xC138;&#xBC88;&#xC9F8; promise
+    <span class="hljs-keyword">await</span> &#xB124;&#xBC88;&#xC9F8; promise
+    ...
+}
+</code></pre>
+<p>await &#xD0A4;&#xC6CC;&#xB4DC;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xAE30; &#xC704;&#xD574;&#xC11C;&#xB294; async &#xD0A4;&#xC6CC;&#xB4DC;&#xAC00; function &#xC55E;&#xC5D0; &#xBD99;&#xC5B4;&#xC57C;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>&#xB610;&#xD55C; await&#xB4A4;&#xC5D0;&#xB294; &#xD56D;&#xC0C1; promise &#xC778;&#xC2A4;&#xD134;&#xC2A4;&#xAC00; &#xC640;&#xC57C;&#xD574;&#xC694;.</p>
+<p>&#xADF8;&#xB807;&#xAC8C;&#xD558;&#xBA74; &#xD574;&#xB2F9; promise&#xAC00; resolve&#xAC12;&#xC744; &#xBC18;&#xD658;&#xD558;&#xAE30; &#xC804;&#xAE4C;&#xC9C0;&#xB294; await&#xAC00; &#xADF8;&#xB2E4;&#xC74C; &#xC9C4;&#xD589;&#xC744; &#xB9C9;&#xC544;&#xC90D;&#xB2C8;&#xB2E4;.</p>
+<p>&#xB2E4;&#xC2DC; &#xD55C;&#xBC88; &#xBCFC;&#xAE4C;&#xC694;?</p>
+<pre><code class="lang-js"><span class="hljs-comment">// &#xBE44;&#xB3D9;&#xAE30;&#xC791;&#xC5C5;</span>
+
+setTimeout(() =&gt; {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-number">1</span>)
+}, <span class="hljs-number">1000</span>)
+<span class="hljs-built_in">console</span>.log(<span class="hljs-number">2</span>)
+
+<span class="hljs-comment">// &#xACB0;&#xACFC;&#xAC12;: 2 1</span>
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-comment">// promise&#xB97C; &#xC774;&#xC6A9;&#xD574;&#xC11C; &#xBE44;&#xB3D9;&#xAE30;&#xB97C; &#xB3D9;&#xAE30;&#xC801;&#xC73C;&#xB85C; &#xBC14;&#xAFB8;&#xBA74;?</span>
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">promiseFunc</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>((resolve) =&gt; {
+        setTimeout(() =&gt; {
+            <span class="hljs-built_in">console</span>.log(<span class="hljs-number">1</span>);
+            resolve();
+        }, <span class="hljs-number">1000</span>)
+    })
+}
+
+promiseFunc().then(() =&gt; {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-number">2</span>);
+})
+
+<span class="hljs-comment">// &#xACB0;&#xACFC;&#xAC12;: 1 2</span>
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-comment">// async-await&#xB97C; &#xC774;&#xC6A9;&#xD558;&#xBA74;?</span>
+
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">asyncFunc</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-keyword">await</span> promiseFunc();
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-number">2</span>);
+}
+
+<span class="hljs-comment">// &#xACB0;&#xACFC;&#xAC12;: 1 2</span>
+</code></pre>
+<p>&#xC5B4;&#xB5A4;&#xAC00;&#xC694;? &#xAC00;&#xB3C5;&#xC131;&#xC774; &#xC544;&#xC8FC; &#xC88B;&#xC8E0;?</p>
+<p>async-await&#xB97C; &#xC4F8;&#xB54C;&#xB294; try~catch&#xB85C; &#xAC10;&#xC2F8;&#xBA74; try&#xC5D0;&#xC11C; &#xBE44;&#xB3D9;&#xAE30;&#xC791;&#xC5C5;&#xC744; &#xD558;&#xB2E4; &#xC5D0;&#xB7EC;&#xAC00; &#xB0A0;&#xACBD;&#xC6B0; catch&#xB85C; &#xC7A1;&#xC544;&#xC904; &#xC218;&#xAC00; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">asyncFunction</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-keyword">try</span> {
+        <span class="hljs-comment">// &#xB124;&#xD2B8;&#xC6CC;&#xD06C; &#xC791;&#xC5C5;, &#xC18C;&#xCF13;&#xC694;&#xCCAD; &#xB4F1; &#xC5EC;&#xB7EC;&#xAC00;&#xC9C0; &#xBE44;&#xB3D9;&#xAE30;&#xC791;&#xC5C5;&#xC744; &#xD558;&#xB2E4;&#xAC00; &#xC5D0;&#xB7EC;&#xAC00; &#xB0A0;&#xACBD;&#xC6B0; catch&#xC758; e&#xB85C; &#xC5D0;&#xB7EC;&#xC778;&#xC790;&#xAC00; &#xB118;&#xC5B4;&#xAC10;</span>
+    } <span class="hljs-keyword">catch</span>(e) {
+        <span class="hljs-built_in">console</span>.error(e)
+    }
+}
+</code></pre>
+<p>promise&#xB97C; &#xC791;&#xC131;&#xD588;&#xC73C;&#xBA74; &#xADF8;&#xAC78; async-await&#xB85C; &#xBC14;&#xAFB8;&#xB294; &#xC5F0;&#xC2B5;&#xC744; &#xD574;&#xBCF4;&#xC138;&#xC694;!</p>
+<pre><code class="lang-js"><span class="hljs-comment">// &#xC9C0;&#xB09C; &#xC2DC;&#xAC04; jsonplaceholder&#xC5D0; promise&#xB85C; &#xC694;&#xCCAD;&#xD55C; &#xAC83;&#xC744; async-await&#xB85C; &#xBC14;&#xAFB8;&#xBA74;?</span>
+
+<span class="hljs-keyword">import</span> React, { Component } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> axios <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;axios&apos;</span>;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">App</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span> </span>{
+    state = {
+        data: <span class="hljs-literal">null</span>
+    };
+
+    handleClick = <span class="hljs-keyword">async</span> () =&gt; {
+        <span class="hljs-keyword">const</span> response = <span class="hljs-keyword">await</span> axios.get(
+            <span class="hljs-string">&apos;https://jsonplaceholder.typicode.com/posts&apos;</span>
+        );
+
+        <span class="hljs-keyword">this</span>.setState({
+            data: response.data
+        });
+    };
+
+    render() {
+        <span class="hljs-keyword">const</span> { data } = <span class="hljs-keyword">this</span>.state;
+        <span class="hljs-keyword">return</span> (
+            <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{this.handleClick}</span>&gt;</span>
+                    api&#xBD88;&#xB7EC;&#xC624;&#xAE30;
+                <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+                    {data &amp;&amp;
+                        data.map(item =&gt; {
+                            return <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">key</span>=<span class="hljs-string">{item.id}</span>&gt;</span>{item.title}<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>;
+                        })}
+                <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+        );
+    }
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> App;
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../3ac15/axios.html" class="navigation navigation-prev " aria-label="Previous page: axios">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="axios-async-await.html" class="navigation navigation-next " aria-label="Next page: 프로젝트 2">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"async-await","level":"5.1","depth":1,"next":{"title":"프로젝트 2","level":"5.2","depth":1,"path":"4ac15/axios-async-await.md","ref":"4ac15/axios-async-await.md","articles":[]},"previous":{"title":"axios","level":"4.5","depth":1,"path":"3ac15/axios.md","ref":"3ac15/axios.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"4ac15/async-await.md","mtime":"2020-03-01T05:37:16.136Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-09T15:50:50.363Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

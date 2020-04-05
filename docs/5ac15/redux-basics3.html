@@ -1,0 +1,887 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>redux basics(3) · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="d504-b85c-c81d-d2b8-2-router-refactoring.html" />
+    
+    
+    <link rel="prev" href="redux-actions-bindactionscreators.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">개강 전</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    workspace settings
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">1강</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../jsx.html">
+            
+                <a href="../jsx.html">
+            
+                    
+                    JSX
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../props-state.html">
+            
+                <a href="../props-state.html">
+            
+                    
+                    Props, State
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../lifecyle-api.html">
+            
+                <a href="../lifecyle-api.html">
+            
+                    
+                    LifeCyle API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../javascript-array-methods.html">
+            
+                <a href="../javascript-array-methods.html">
+            
+                    
+                    Javascript Array Methods
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../wrap-ups.html">
+            
+                <a href="../wrap-ups.html">
+            
+                    
+                    Wrap-ups (1)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">2강</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../filter.html">
+            
+                <a href="../filter.html">
+            
+                    
+                    Wrap-ups (2)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../cef4-d3ec-b10c-d2b8-ad6c-c870-d654.html">
+            
+                <a href="../cef4-d3ec-b10c-d2b8-ad6c-c870-d654.html">
+            
+                    
+                    프로젝트 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../shouldcomponentupdate.html">
+            
+                <a href="../shouldcomponentupdate.html">
+            
+                    
+                    shouldComponentUpdate
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../c368-b4dc-d30c-d2f0-b77c-c774-be0c-b7ec-b9ac-c774-c6a9.html">
+            
+                <a href="../c368-b4dc-d30c-d2f0-b77c-c774-be0c-b7ec-b9ac-c774-c6a9.html">
+            
+                    
+                    써드파티 라이브러리 이용
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../ac1c-bc1c-b3c4-ad6c-c124-ce58.html">
+            
+                <a href="../ac1c-bc1c-b3c4-ad6c-c124-ce58.html">
+            
+                    
+                    개발도구 설치
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="../setstate.html">
+            
+                <a href="../setstate.html">
+            
+                    
+                    setState
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">3강</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../3ac15/immer.html">
+            
+                <a href="../3ac15/immer.html">
+            
+                    
+                    Immer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../3ac15/sass.html">
+            
+                <a href="../3ac15/sass.html">
+            
+                    
+                    sass (1)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../3ac15/sass-2.html">
+            
+                <a href="../3ac15/sass-2.html">
+            
+                    
+                    sass (2)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../3ac15/promise.html">
+            
+                <a href="../3ac15/promise.html">
+            
+                    
+                    promise
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../3ac15/axios.html">
+            
+                <a href="../3ac15/axios.html">
+            
+                    
+                    axios
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">4강</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../4ac15/async-await.html">
+            
+                <a href="../4ac15/async-await.html">
+            
+                    
+                    async-await
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../4ac15/axios-async-await.html">
+            
+                <a href="../4ac15/axios-async-await.html">
+            
+                    
+                    프로젝트 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../4ac15/react-router.html">
+            
+                <a href="../4ac15/react-router.html">
+            
+                    
+                    react router
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="../4ac15/redux.html">
+            
+                <a href="../4ac15/redux.html">
+            
+                    
+                    redux
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">5강</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="redux-basics.html">
+            
+                <a href="redux-basics.html">
+            
+                    
+                    redux basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="redux-basics2.html">
+            
+                <a href="redux-basics2.html">
+            
+                    
+                    redux basics(2)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="redux-actions-bindactionscreators.html">
+            
+                <a href="redux-actions-bindactionscreators.html">
+            
+                    
+                    redux actions, bindActionsCreators
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="6.4" data-path="redux-basics3.html">
+            
+                <a href="redux-basics3.html">
+            
+                    
+                    redux basics(3)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="d504-b85c-c81d-d2b8-2-router-refactoring.html">
+            
+                <a href="d504-b85c-c81d-d2b8-2-router-refactoring.html">
+            
+                    
+                    router refactoring
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >redux basics(3)</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&#xC6B0;&#xB9AC;&#xAC00; &#xB9CC;&#xB4E4;&#xB824;&#xACE0; &#xD558;&#xB294; &#xAC83;&#xC5D0; &#xC5B4;&#xB5A4; &#xC561;&#xC158;&#xB4E4;&#xC774; &#xD544;&#xC694;&#xD55C;&#xC9C0;&#xB97C; &#xC54C;&#xBA74;, &#xB9AC;&#xB4C0;&#xC11C;&#xB97C; &#xC704;&#xD55C; &#xBAA8;&#xB4C8;&#xD30C;&#xC77C;&#xC744; &#xC791;&#xC131;&#xD558;&#xB294; &#xAC83;&#xC740; &#xC27D;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xC561;&#xC158;, &#xC561;&#xC158;&#xC0DD;&#xC131;&#xD568;&#xC218;, &#xADF8;&#xB9AC;&#xACE0; &#xB9AC;&#xB4C0;&#xC11C; &#xC21C;&#xC73C;&#xB85C; &#xB9CC;&#xB4E4;&#xAE30;&#xB9CC; &#xD558;&#xBA74; &#xB418;&#xB2C8;&#xAE4C;&#xC694;.</p>
+<p>&#xADF8;&#xB807;&#xB2E4;&#xBA74; &#xC5B4;&#xB5A4; &#xC561;&#xC158;&#xB4E4;&#xC774; &#xD544;&#xC694;&#xD55C;&#xAC00;&#xC694;? </p>
+<p>&#xC0C9;&#xC0C1;&#xAC12;&#xC744; &#xC785;&#xB825;&#xD558;&#xB294; &#xC561;&#xC158;, &#xC0C9;&#xC0C1;&#xAC12;&#xC744; &#xCD94;&#xAC00;&#xD558;&#xB294; &#xC561;&#xC158;, &#xC0C9;&#xC0C1;&#xAC12;&#xC758; &#xBD88;&#xD22C;&#xBA85;&#xB3C4;&#xB97C; &#xC5C5;&#xB370;&#xC774;&#xD2B8; &#xD558;&#xB294; &#xC561;&#xC158;, &#xC0C9;&#xC0C1;&#xAC12;&#xC744; &#xC9C0;&#xC6B0;&#xB294; &#xC561;&#xC158; &#xC774;&#xB807;&#xAC8C; &#xCD1D; &#xB124;&#xAC00;&#xC9C0;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p>&#xC774;&#xBC88;&#xC5D0;&#xB294; &#xC774;&#xC804; &#xC139;&#xC158;&#xC5D0;&#xC11C; &#xBC30;&#xC6E0;&#xB358; createAction, handleActions&#xB97C; &#xC0AC;&#xC6A9;&#xD574;&#xC11C; &#xBAA8;&#xB4C8;&#xD30C;&#xC77C;&#xC744; &#xC791;&#xC131;&#xD574;&#xBCF4;&#xACA0;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-js"><span class="hljs-comment">// src/store/modules/colorList.js</span>
+
+<span class="hljs-keyword">import</span> { createAction, handleActions } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;redux-actions&apos;</span>;
+
+<span class="hljs-keyword">const</span> CHANGE_INPUT = <span class="hljs-string">&apos;colorList/CHANGE_INPUT&apos;</span>;
+<span class="hljs-keyword">const</span> INSERT = <span class="hljs-string">&apos;colorList/INSERT&apos;</span>;
+<span class="hljs-keyword">const</span> UPDATE = <span class="hljs-string">&apos;colorList/UPDATE&apos;</span>;
+<span class="hljs-keyword">const</span> REMOVE = <span class="hljs-string">&apos;colorList/REMOVE&apos;</span>;
+
+<span class="hljs-keyword">let</span> id = <span class="hljs-number">1</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> changeInput = createAction(CHANGE_INPUT, text =&gt; text);
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> insert = createAction(INSERT, color =&gt; ({ color, id: id++ }));
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> update = createAction(UPDATE, id =&gt; id);
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> remove = createAction(REMOVE, id =&gt; id);
+
+<span class="hljs-keyword">const</span> initialState = {
+    input: <span class="hljs-string">&apos;&apos;</span>,
+    list: []
+};
+
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> handleActions(
+    {
+        [CHANGE_INPUT]: (state, action) =&gt; ({
+            ...state,
+            input: action.payload
+        }),
+        [INSERT]: (state, action) =&gt; ({
+            ...state,
+            list: state.list.concat({
+                id: action.payload.id,
+                color: action.payload.color,
+                opacity: <span class="hljs-number">1</span>
+            })
+        }),
+        [UPDATE]: (state, action) =&gt; ({
+            ...state,
+            list: state.list.map(item =&gt; {
+                <span class="hljs-keyword">if</span> (item.id === action.payload) {
+                    <span class="hljs-keyword">return</span> {
+                        ...item,
+                        opacity: item.opacity - <span class="hljs-number">0.1</span>
+                    };
+                }
+                <span class="hljs-keyword">return</span> item;
+            })
+        }),
+        [REMOVE]: (state, action) =&gt; ({
+            ...state,
+            list: state.list.filter(item =&gt; item.id !== action.payload)
+        })
+    },
+    initialState
+);
+</code></pre>
+<p>&#xC704; &#xCF54;&#xB4DC;&#xC5D0;&#xC11C; &#xC8FC;&#xBAA9;&#xD574;&#xC57C; &#xD560; &#xC810;&#xC740;, &#xB9AC;&#xB4C0;&#xC11C;&#xB294; &#xBC18;&#xB4DC;&#xC2DC; &#xC21C;&#xC218;&#xD574;&#xC57C; &#xD55C;&#xB2E4;&#xB294; &#xAC83;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p>&#xC21C;&#xC218;&#xD568;&#xC758; &#xC758;&#xBBF8;&#xAC00; &#xBB34;&#xC5C7;&#xC778;&#xC9C0;, &#xB9AC;&#xB4C0;&#xC11C;&#xAC00; &#xC65C; &#xC21C;&#xC218;&#xD574;&#xC57C;&#xD558;&#xB294;&#xC9C0;&#xB294; &#xC218;&#xC5C5;&#xC2DC;&#xAC04;&#xC5D0; &#xC124;&#xBA85;&#xD574;&#xB4DC;&#xB838;&#xC8E0;?</p>
+<p>&#xB9AC;&#xB4C0;&#xC11C;&#xC5D0;&#xC11C; INSERT&#xBD80;&#xBD84;&#xC744; &#xBCF4;&#xBA74; id&#xB97C; action.payload.id&#xB85C; &#xBC1B;&#xC544;&#xC654;&#xC74C;&#xC744; &#xD655;&#xC778;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>INSERT&#xD560; &#xB54C;&#xB9C8;&#xB2E4; &#xC0AC;&#xC804;&#xC5D0; id&#xAC12;&#xC744; 1&#xC529; &#xB354;&#xD574;&#xC8FC;&#xB294; &#xC791;&#xC5C5;&#xC744; &#xD574;&#xC57C;&#xD558;&#xB294;&#xB370;, &#xADF8;&#xAC74; &#xC561;&#xC158;&#xC0DD;&#xC131;&#xD568;&#xC218;&#xC5D0;&#xC11C; &#xB300;&#xC2E0; &#xD574;&#xC8FC;&#xC5C8;&#xC8E0;.</p>
+<p>&#xC704;&#xC640; &#xAC19;&#xC774; id&#xC5D0; 1&#xC529; &#xB354;&#xD574;&#xC8FC;&#xB294; &#xAC04;&#xB2E8;&#xD55C; &#xC791;&#xC5C5;&#xB4E4;&#xC740; &#xC561;&#xC158;&#xC0DD;&#xC131;&#xD568;&#xC218;&#xC5D0;&#xC11C; &#xB300;&#xC2E0; &#xD574;&#xC904; &#xC218; &#xC788;&#xC9C0;&#xB9CC;, </p>
+<p>&#xC18C;&#xCF13;&#xD1B5;&#xC2E0;&#xC774;&#xB098; api&#xD638;&#xCD9C; &#xB4F1;&#xACFC; &#xAC19;&#xC740; &#xBE44;&#xB3D9;&#xAE30; &#xC791;&#xC5C5;&#xC740; &#xADF8;&#xB807;&#xAC8C; &#xD560; &#xC218; &#xC5C6;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xB530;&#xB77C;&#xC11C; &#xB9AC;&#xB355;&#xC2A4;&#xC5D0;&#xC11C; &#xBE44;&#xB3D9;&#xAE30;&#xC791;&#xC5C5;&#xC744; &#xCC98;&#xB9AC;&#xD560; &#xB54C;&#xB294; &#xB9AC;&#xB355;&#xC2A4; &#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4;&#xB97C; &#xC0AC;&#xC6A9;&#xD569;&#xB2C8;&#xB2E4;. &#xC774;&#xAC74; &#xB2E4;&#xC74C;&#xC2DC;&#xAC04;&#xC5D0; &#xBC30;&#xC6CC;&#xBD05;&#xC2DC;&#xB2E4;.</p>
+<p>&#xC774;&#xC5B4;&#xC11C; combineReducers&#xB97C; &#xD1B5;&#xD574; &#xB9AC;&#xB4C0;&#xC11C; &#xBAA8;&#xB4C8;&#xC744; &#xD569;&#xCCD0;&#xC90D;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-js"><span class="hljs-comment">// src/store/modules/index.js</span>
+
+<span class="hljs-keyword">import</span> { combineReducers } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;redux&apos;</span>;
+<span class="hljs-keyword">import</span> counter <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./counter&apos;</span>;
+<span class="hljs-keyword">import</span> colorList <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./colorList&apos;</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> combineReducers({
+    counter,
+    colorList
+});
+</code></pre>
+<p>&#xC5EC;&#xAE30;&#xAE4C;&#xC9C0; &#xD588;&#xC73C;&#xBA74; &#xC2A4;&#xD1A0;&#xC5B4; &#xC548;&#xC5D0; colorList&#xC640; &#xAD00;&#xB828;&#xD55C; &#xC0C1;&#xD0DC; &#xAC12;, &#xADF8;&#xB9AC;&#xACE0; &#xC0C1;&#xD0DC;&#xBCC0;&#xD654; &#xD568;&#xC218;&#xC778; &#xB9AC;&#xB4C0;&#xC11C;&#xAC00; &#xBC18;&#xC601;&#xC774; &#xB418;&#xC5C8;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xC774;&#xC81C;&#xB294; &#xBC18;&#xBCF5; &#xC791;&#xC5C5;&#xC785;&#xB2C8;&#xB2E4;. &#xCEE8;&#xD14C;&#xC774;&#xB108; &#xCEF4;&#xD3EC;&#xB10C;&#xD2B8;&#xB97C; &#xC791;&#xC131;&#xD574;&#xC8FC;&#xC138;&#xC694;.</p>
+<pre><code class="lang-js"><span class="hljs-comment">// src/containers/ColorListContainer.js</span>
+
+<span class="hljs-keyword">import</span> React, { Component } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> { connect } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-redux&apos;</span>;
+<span class="hljs-keyword">import</span> ColorList <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../components/ColorList&apos;</span>;
+<span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> colorListActions <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../store/modules/colorList&apos;</span>;
+<span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> counterActions <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../store/modules/counter&apos;</span>;
+<span class="hljs-keyword">import</span> { bindActionCreators } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;redux&apos;</span>;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ColorListContainer</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span> </span>{
+    render() {
+        <span class="hljs-keyword">const</span> { input, list, ColorListActions, CounterActions } = <span class="hljs-keyword">this</span>.props;
+
+        <span class="hljs-keyword">return</span> (
+            <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">ColorList</span>
+                <span class="hljs-attr">input</span>=<span class="hljs-string">{input}</span>
+                <span class="hljs-attr">list</span>=<span class="hljs-string">{list}</span>
+                <span class="hljs-attr">ColorListActions</span>=<span class="hljs-string">{ColorListActions}</span>
+                <span class="hljs-attr">CounterActions</span>=<span class="hljs-string">{CounterActions}</span>
+            /&gt;</span>
+        );
+    }
+}
+
+const mapStateToProps = ({ colorList: { input, list } }) =&gt; ({
+    input,
+    list
+});
+
+const mapDispatchToProps = dispatch =&gt; ({
+    ColorListActions: bindActionCreators(colorListActions, dispatch),
+    CounterActions: bindActionCreators(counterActions, dispatch)
+});
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(ColorListContainer);
+</span></code></pre>
+<p>&#xC774;&#xBC88;&#xC5D0;&#xB294; bindActionsCreators&#xB97C; &#xBD88;&#xB7EC;&#xC640;&#xC11C; mapDispatchToProps&#xB97C; &#xC791;&#xC131;&#xD588;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>import&#xD574;&#xC57C;&#xD560; &#xC561;&#xC158;&#xC0DD;&#xC131;&#xD568;&#xC218; &#xAC1C;&#xC218;&#xAC00; &#xB108;&#xBB34; &#xB9CE;&#xC744; &#xACBD;&#xC6B0; import * as ~ &#xC774;&#xB7F0;&#xC2DD;&#xC73C;&#xB85C; &#xC561;&#xC158;&#xC0DD;&#xC131;&#xD568;&#xC218;&#xB97C; &#xD55C;&#xBC88;&#xC5D0; &#xBD88;&#xB7EC;&#xC640;&#xC11C;</p>
+<p>mapDispatchToProps&#xB97C; &#xC791;&#xC131;&#xD560; &#xB54C; bindActionCreators&#xB97C; &#xD1B5;&#xD574; &#xC774;&#xB4E4;&#xC744; &#xD55C;&#xBC88;&#xC5D0; &#xBB36;&#xC5B4;&#xC8FC;&#xBA74; &#xD3B8;&#xD558;&#xAC8C; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xB610;&#xD55C; &#xC0C8;&#xB86D;&#xAC8C; &#xCD94;&#xAC00;&#xD55C; color&#xAC12;&#xC744; &#xCE74;&#xC6B4;&#xD130; &#xCEF4;&#xD3EC;&#xB10C;&#xD2B8;&#xC5D0;&#xB3C4; &#xBC18;&#xC601;&#xD574;&#xC57C; &#xD558;&#xBBC0;&#xB85C; CounterActions&#xB3C4; &#xBD88;&#xB7EC;&#xC654;&#xC74C;&#xC744; &#xBCFC; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xCEE8;&#xD14C;&#xC774;&#xB108;&#xB97C; &#xC791;&#xC131;&#xD588;&#xC73C;&#xB2C8; &#xC774;&#xC81C;&#xB294; &#xCEF4;&#xD3EC;&#xB10C;&#xD2B8;&#xC5D0;&#xC11C; &#xADF8;&#xB300;&#xB85C; &#xBC1B;&#xC544;&#xC11C; &#xBCF4;&#xC5EC;&#xC8FC;&#xB294; &#xC791;&#xC5C5;&#xC744; &#xD574;&#xBCFC;&#xAE4C;&#xC694;?</p>
+<pre><code class="lang-js"><span class="hljs-comment">// src/components/ColorList.js</span>
+
+<span class="hljs-keyword">import</span> React, { Component } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">&apos;./ColorList.css&apos;</span>;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ColorList</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span> </span>{
+    handleChange = e =&gt; {
+        <span class="hljs-keyword">const</span> { value } = e.target;
+        <span class="hljs-keyword">const</span> { ColorListActions } = <span class="hljs-keyword">this</span>.props;
+        ColorListActions.changeInput(value);
+    };
+
+    handleSubmit = e =&gt; {
+        e.preventDefault();
+        <span class="hljs-keyword">const</span> { ColorListActions, CounterActions, input } = <span class="hljs-keyword">this</span>.props;
+        ColorListActions.insert(input);
+        CounterActions.changeColor(input);
+        ColorListActions.changeInput(<span class="hljs-string">&apos;&apos;</span>);
+    };
+
+    handleUpdate = id =&gt; {
+        <span class="hljs-keyword">const</span> { ColorListActions } = <span class="hljs-keyword">this</span>.props;
+        ColorListActions.update(id);
+    };
+
+    handleRemove = id =&gt; {
+        <span class="hljs-keyword">const</span> { ColorListActions } = <span class="hljs-keyword">this</span>.props;
+        ColorListActions.remove(id);
+    };
+
+    render() {
+        <span class="hljs-keyword">const</span> { input, list } = <span class="hljs-keyword">this</span>.props;
+
+        <span class="hljs-keyword">return</span> (
+            &lt;div&gt;
+                &lt;form className=&quot;ColorList&quot; onSubmit={this.handleSubmit}&gt;
+                    &lt;input
+                        placeholder=&quot;&#xC6D0;&#xD558;&#xB294; &#xC0C9;&#xC744; &#xC785;&#xB825;&#xD558;&#xC138;&#xC694;&quot;
+                        value={input}
+                        onChange={this.handleChange}
+                    /&gt;
+                &lt;/form&gt;
+                &lt;ul&gt;
+                    {list.map(item =&gt; {
+                        return (
+                            &lt;div
+                                key={item.id}
+                                style={{
+                                    backgroundColor: item.color,
+                                    opacity: item.opacity,
+                                    width: &apos;50px&apos;,
+                                    height: &apos;50px&apos;,
+                                    float: &apos;left&apos;
+                                }}
+                                onClick={() =&gt; this.handleUpdate(item.id)}
+                                onContextMenu={e =&gt; {
+                                    e.preventDefault();
+                                    this.handleRemove(item.id);
+                                }}
+                            /&gt;
+                        );
+                    })}
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        );
+    }
+}
+
+export default ColorList;
+</code></pre>
+<p>&#xC774;&#xC81C; &#xAC1C;&#xBC1C;&#xC11C;&#xBC84;&#xB97C; &#xC5F4;&#xACE0; &#xC774;&#xAC83;&#xC800;&#xAC83; &#xD574;&#xBCF4;&#xC138;&#xC694;. &#xC544;&#xB9C8; &#xC798; &#xB420; &#xAC83;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p>insert&#xD55C; &#xC0C9;&#xC744; &#xD074;&#xB9AD;&#xD558;&#xBA74; &#xBD88;&#xD22C;&#xBA85;&#xB3C4;&#xAC00; &#xC99D;&#xAC00;&#xD558;&#xACE0; &#xC6B0;&#xD074;&#xB9AD;&#xC744;&#xD558;&#xBA74; &#xC0AC;&#xB77C;&#xC9C0;&#xAC8C; &#xD558;&#xC8E0;.</p>
+<p>&#xC0AC;&#xC2E4; &#xC5EC;&#xAE30;&#xAE4C;&#xC9C0;&#xB9CC; &#xD574;&#xB3C4; &#xC798; &#xC791;&#xB3D9;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>&#xD558;&#xC9C0;&#xB9CC; &#xC6B0;&#xB9AC;&#xB294; .map&#xCC98;&#xB9AC;&#xB97C; &#xD1B5;&#xD574; &#xBC30;&#xC5F4;&#xC744; &#xB80C;&#xB354;&#xD588;&#xC73C;&#xBBC0;&#xB85C; &#xCD5C;&#xC801;&#xD654;&#xC5D0; &#xB300;&#xD55C; &#xC758;&#xC2EC;&#xC744; &#xD574;&#xC8FC;&#xC5B4;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>&#xAC15;&#xC758; &#xCD08;&#xBC18;&#xC5D0; todolist&#xB97C; &#xB9CC;&#xB4E4;&#xC5B4;&#xBCFC; &#xB54C; shouldComponentUpdate&#xB97C; &#xC0AC;&#xC6A9;&#xD588;&#xB358; &#xAC83; &#xAE30;&#xC5B5;&#xB098;&#xC2DC;&#xB098;&#xC694;?</p>
+<p>&#xB9C8;&#xCC2C;&#xAC00;&#xC9C0;&#xC785;&#xB2C8;&#xB2E4;. shouldComponentUpdate&#xB294; lifeCycle&#xBA54;&#xC18C;&#xB4DC;&#xC774;&#xBBC0;&#xB85C; div&#xB300;&#xC2E0; &#xB530;&#xB85C; &#xCEF4;&#xD3EC;&#xB10C;&#xD2B8;&#xB97C; &#xB9CC;&#xB4E4;&#xC5B4;&#xC90D;&#xC2DC;&#xB2E4;.</p>
+<pre><code class="lang-js"><span class="hljs-comment">// src/components/ListItem.js</span>
+
+<span class="hljs-keyword">import</span> React, { Component } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ListItem</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span> </span>{
+    shouldComponentUpdate(nextProps, nextState) {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.props.item !== nextProps.item;
+    }
+
+    render() {
+        <span class="hljs-keyword">const</span> { style, onUpdate, onRemove, item } = <span class="hljs-keyword">this</span>.props;
+        <span class="hljs-keyword">return</span> (
+            <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>
+                <span class="hljs-attr">style</span>=<span class="hljs-string">{style}</span>
+                <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> onUpdate(item.id)}
+                onContextMenu={e =&gt; {
+                    e.preventDefault();
+                    onRemove(item.id);
+                }}
+            /&gt;
+        );
+    }
+}
+export default ListItem;
+</span></code></pre>
+<pre><code class="lang-js"><span class="hljs-comment">// src/components/ColorList.js</span>
+
+<span class="hljs-keyword">import</span> React, { Component } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">&apos;./ColorList.css&apos;</span>;
+<span class="hljs-keyword">import</span> ListItem <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./ListItem&apos;</span>;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ColorList</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span> </span>{
+    handleChange = e =&gt; {
+        <span class="hljs-keyword">const</span> { value } = e.target;
+        <span class="hljs-keyword">const</span> { ColorListActions } = <span class="hljs-keyword">this</span>.props;
+        ColorListActions.changeInput(value);
+    };
+
+    handleSubmit = e =&gt; {
+        e.preventDefault();
+        <span class="hljs-keyword">const</span> { ColorListActions, CounterActions, input } = <span class="hljs-keyword">this</span>.props;
+        ColorListActions.insert(input);
+        CounterActions.changeColor(input);
+        ColorListActions.changeInput(<span class="hljs-string">&apos;&apos;</span>);
+    };
+
+    handleUpdate = id =&gt; {
+        <span class="hljs-keyword">const</span> { ColorListActions } = <span class="hljs-keyword">this</span>.props;
+        ColorListActions.update(id);
+    };
+
+    handleRemove = id =&gt; {
+        <span class="hljs-keyword">const</span> { ColorListActions } = <span class="hljs-keyword">this</span>.props;
+        ColorListActions.remove(id);
+    };
+
+    render() {
+        <span class="hljs-keyword">const</span> { input, list } = <span class="hljs-keyword">this</span>.props;
+
+        <span class="hljs-keyword">return</span> (
+            &lt;div&gt;
+                &lt;form className=&quot;ColorList&quot; onSubmit={this.handleSubmit}&gt;
+                    &lt;input
+                        placeholder=&quot;&#xC6D0;&#xD558;&#xB294; &#xC0C9;&#xC744; &#xC785;&#xB825;&#xD558;&#xC138;&#xC694;&quot;
+                        value={input}
+                        onChange={this.handleChange}
+                    /&gt;
+                &lt;/form&gt;
+                &lt;ul&gt;
+                    {list.map(item =&gt; {
+                        return (
+                            &lt;ListItem
+                                key={item.id}
+                                item={item}
+                                style={{
+                                    backgroundColor: item.color,
+                                    opacity: item.opacity,
+                                    width: &apos;50px&apos;,
+                                    height: &apos;50px&apos;,
+                                    float: &apos;left&apos;
+                                }}
+                                onUpdate={this.handleUpdate}
+                                onRemove={this.handleRemove}
+                            /&gt;
+                        );
+                    })}
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        );
+    }
+}
+
+export default ColorList;
+</code></pre>
+<p>&#xB530;&#xB77C;&#xC11C; &#xC774;&#xC640;&#xAC19;&#xC774; map&#xCC98;&#xB9AC;&#xB418;&#xB294; &#xCEF4;&#xD3EC;&#xB10C;&#xD2B8;&#xB4E4;&#xC740; shouldComponentUpdate&#xC640; &#xAC19;&#xC740; &#xCD5C;&#xC801;&#xD654;&#xB294; &#xAE30;&#xBCF8;&#xC73C;&#xB85C; &#xD574;&#xC8FC;&#xC2DC;&#xB294; &#xAC83;&#xC774; &#xC88B;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="redux-actions-bindactionscreators.html" class="navigation navigation-prev " aria-label="Previous page: redux actions, bindActionsCreators">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="d504-b85c-c81d-d2b8-2-router-refactoring.html" class="navigation navigation-next " aria-label="Next page: router refactoring">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"redux basics(3)","level":"6.4","depth":1,"next":{"title":"router refactoring","level":"6.5","depth":1,"path":"5ac15/d504-b85c-c81d-d2b8-2-router-refactoring.md","ref":"5ac15/d504-b85c-c81d-d2b8-2-router-refactoring.md","articles":[]},"previous":{"title":"redux actions, bindActionsCreators","level":"6.3","depth":1,"path":"5ac15/redux-actions-bindactionscreators.md","ref":"5ac15/redux-actions-bindactionscreators.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"5ac15/redux-basics3.md","mtime":"2020-03-09T12:02:15.865Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-09T15:50:50.363Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
